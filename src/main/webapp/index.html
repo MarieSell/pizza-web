@@ -8,7 +8,8 @@
 	<h1>Willkommen zu Mr. Pizza</h1>
 	<h2>Wählen Sie eine Pizza</h2>
 
-	<form>
+	<form id="zutatenFormId" name="zutaten" method="post"
+		action="ZutatenPreisServlet">
 		<h3>Kreuzen Sie die gewünschten Zutaten an:</h3>
 		<fieldset>
 			<ul>
@@ -24,6 +25,8 @@
 			</ul>
 		</fieldset>
 	</form>
+
+	<button form="zutatenFormId">abschicken</button>
 
 </body>
 </html>
