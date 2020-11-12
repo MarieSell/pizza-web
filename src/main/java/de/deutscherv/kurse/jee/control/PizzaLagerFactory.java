@@ -3,6 +3,7 @@ package de.deutscherv.kurse.jee.control;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.New;
 import javax.enterprise.inject.Produces;
+import javax.inject.Named;
 
 import de.deutscherv.kurse.jee.entity.Pizza;
 
@@ -11,6 +12,7 @@ public class PizzaLagerFactory {
 
 	@Produces
 	@ApplicationScoped
+	@Named("lager") // in Facelet verwendbar wird
 	public PizzaLager createSamples(@New PizzaLager lager) {
 		lager.add(new Pizza(1, "Margherita", 27));
 		lager.add(new Pizza(2, "Salami", 29));

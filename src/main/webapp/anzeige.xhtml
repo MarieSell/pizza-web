@@ -1,0 +1,30 @@
+<html xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+
+</head>
+<h:body>
+	<h1>
+		<h:outputText id="pageTitle" value="Anzeige mit JSF" />
+	</h1>
+
+	<h:dataTable value="#{lager.pizzen}" var="p">
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Name" />
+			</f:facet>
+			<h:outputText value="#{p.name}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Durchmesser" />
+			</f:facet>
+			<h:outputText value="#{p.durchmesser}" />
+		</h:column>
+	</h:dataTable>
+
+</h:body>
+
+</html>

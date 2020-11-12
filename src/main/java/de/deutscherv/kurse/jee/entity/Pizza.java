@@ -2,11 +2,16 @@ package de.deutscherv.kurse.jee.entity;
 
 import java.io.Serializable;
 
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import com.sun.istack.NotNull;
 
+@RequestScoped
+@Named("eingabePizza")
 public class Pizza implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -15,12 +20,17 @@ public class Pizza implements Serializable {
 	private int kartennummer;
 	@Size(min = 4)
 	@NotNull
+	@Pattern(regexp = "[A-Z].*")
 	private String name;
 	@Min(20)
 	private int durchmesser;
 	// private Ofen ofen; // Field Injection
 
 	public void rolleTeig(TeigRolle rolle) { // MethodInjection
+	}
+
+	public Pizza() {
+		super();
 	}
 
 	public Pizza(int kartennummer, String name, int durchmesser) { // Constructor Injection
