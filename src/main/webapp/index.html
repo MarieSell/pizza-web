@@ -6,29 +6,29 @@
 </head>
 <body>
 	<h1>Willkommen zu Mr. Pizza</h1>
-	<h2>Wählen Sie eine Pizza</h2>
-
-	<form id="zutatenFormId" name="zutaten" method="post"
-		action="ZutatenPreisServlet">
-		<h3>Kreuzen Sie die gewünschten Zutaten an:</h3>
-		<fieldset>
-			<ul>
-				<li><label> <input type="checkbox" name="zutat"
-						value="salami"> Salami
-				</label></li>
-				<li><label> <input type="checkbox" name="zutat"
-						value="schinken"> Schinken
-				</label></li>
-				<li><label> <input type="checkbox" name="zutat"
-						value="sardellen"> Sardellen
-				</label></li>
-			</ul>
-		</fieldset>
-	</form>
-
-	<button form="zutatenFormId">abschicken</button>
 	
-	<a href="suche.html">Suche</a>
+	
+	<!-- Weiterleitung ueber Formulare -->
+	<form id="zumPizzaLagerId" action="displayPizzaLager.jsp" method="post"
+		name="showThat" value="all"></form>
+	<form id="zurSucheId" action="suche.html" method="get"></form>
+	<form id="zumWarenkorbId" action="warenkorb.jsp" method="post"
+		name="showThat" value="merkliste"></form>
+	<form id="zumInsertId" action="insert.html"></form>
+	
+	<!-- Button Section -->
+	<p>
+		<button form="zumPizzaLagerId">Alle Pizzen</button>
+	</p>
+	<p>
+		<button form="zurSucheId">Suche</button>
+	</p>
+	<p>
+		<button form="zumInsertId">Erstellen</button>
+	</p>
+	<p>
+		<button form="zumWarenkorbId">Warenkorb</button>
+	</p>
 
 </body>
 </html>

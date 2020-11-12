@@ -5,15 +5,14 @@ import java.util.LinkedList;
 
 import de.deutscherv.kurse.jee.entity.Pizza;
 
-public class PizzenLager {
-
-	private static final PizzenLager theInstance = new PizzenLager();
+@PizzaHandling
+public class PizzaLager {
 
 	private final Collection<Pizza> pizzen = new LinkedList<>();
+	
+	// nur 1 Lager in der Anwendung -> Singleton
 
-	private PizzenLager() {
-		pizzen.add(new Pizza(01, "Margarita", 5.50));
-		pizzen.add(new Pizza(02, "Salami", 6.50));
+	public PizzaLager() {
 	}
 
 	public Collection<Pizza> getPizzen() {
@@ -26,10 +25,6 @@ public class PizzenLager {
 
 	public boolean remove(Pizza o) {
 		return pizzen.remove(o);
-	}
-
-	public static PizzenLager getInstance() {
-		return theInstance;
 	}
 
 }

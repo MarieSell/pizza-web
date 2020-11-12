@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Neue Pizza</title>
+<style type="text/css">
+label {
+	width: 5em;
+	display: inline-block;
+}
+</style>
+</head>
+<body>
+	<h1>Lieblings-Pizza erstellen</h1>
+	<form action="pizzaAnlegen" method="post">
+		<p>
+			<label for="pizzaname">Hauptzutat:</label> <input id="hauptzutat"
+				name="hauptzutat" type="text" />
+		</p>
+		<p>
+			<label for="groesze">Durchmesser:</label> <input id="durchmesser"
+				name="durchmesser" type="number" />
+		</p>
+		<input type="submit" />
+	</form>
+</body>
+</html>

@@ -1,20 +1,24 @@
 package de.deutscherv.kurse.jee.entity;
 
-public class Pizza {
+import java.io.Serializable;
+
+public class Pizza implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private int kartenNummer;
 	private String name;
-	private double preis;
+	private int durchmesser;
+	// private Ofen ofen; // Field Injection
 
-	public Pizza() {
-		super();
+	public void rolleTeig(TeigRolle rolle) { // MethodInjection
 	}
 
-	public Pizza(int kartennummer, String name, double preis) {
+	public Pizza(int kartennummer, String name, int durchmesser) { // Constructor Injection
 		super();
 		this.kartenNummer = kartennummer;
 		this.name = name;
-		this.preis = preis;
+		this.durchmesser = durchmesser;
 	}
 
 	public int getKartenNummer() {
@@ -33,12 +37,12 @@ public class Pizza {
 		this.name = name;
 	}
 
-	public double getPreis() {
-		return preis;
+	public int getdurchmesser() {
+		return durchmesser;
 	}
 
-	public void setPreis(double preis) {
-		this.preis = preis;
+	public void setdurchmesser(int durchmesser) {
+		this.durchmesser = durchmesser;
 	}
-	
+
 }
