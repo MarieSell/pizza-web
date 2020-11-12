@@ -38,7 +38,7 @@ public class PizzenDatenSuche extends HttpServlet {
 			// Antwort generieren in JSP, kein PrintWriter!
 			request.setAttribute("pz", suchErgebnisse);
 			request.setAttribute("pageTitle", "Suchergebnisse fuer '" + suchtext + "'");
-			request.getRequestDispatcher("displayPizzaLager.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/jsp/displayPizzen.jsp").forward(request, response);
 		}
 
 	}

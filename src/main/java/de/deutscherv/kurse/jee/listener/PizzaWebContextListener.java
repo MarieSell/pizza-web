@@ -15,12 +15,9 @@ import de.deutscherv.kurse.jee.control.PizzaLager;
 public class PizzaWebContextListener implements ServletContextListener {
 
 	public void contextInitialized(ServletContextEvent sce) {
-		System.out.println("ServletContextListener started.");
-		PizzaLager pizzenLager = new PizzaLager();
+		System.out.println("ServletContextListener started. Logging initialisiert.");
 		ServletContext sc = sce.getServletContext(); 
-		sc.setAttribute("pizzenLager", pizzenLager);
 		
-		System.out.println("PizzenLager initialisiert");
 		
 	}
 }

@@ -7,14 +7,16 @@ import java.util.TreeSet;
 
 import javax.enterprise.context.SessionScoped;
 
+import de.deutscherv.kurse.jee.control.PizzaHandling;
 import de.deutscherv.kurse.jee.entity.Pizza;
 
 @SessionScoped
+@PizzaHandling
 public class Warenkorb implements Serializable {
 
 	private static final long serialVersionUID = -1967512274800853590L;
 
-	private final Collection<Pizza> pizzen = new TreeSet<>(Comparator.comparing(Pizza::getKartenNummer));
+	private final Collection<Pizza> pizzen = new TreeSet<>(Comparator.comparing(Pizza::getKartennummer));
 
 	public Collection<Pizza> getPizza() {
 		return pizzen;
